@@ -3,12 +3,20 @@
 using System.Diagnostics;
 using AOC2023.Day1;
 using AOC2023.Day2;
+using AOC2023.Day3;
+using AOC2023.Day4;
 using AOC2023.Utils;
 using static System.Console;
 
-List<ISolutionRunner> solutions = new() { new Day1(), new Day2() };
+List<ISolutionRunner> solutions = new()
+{
+    new Day1(), 
+    new Day2(), 
+    new Day3(), 
+    new Day4()
+};
 var stopwatch = new Stopwatch();
-const int runs = 5;
+const int runs = 1;
 
 WriteLine("{0,8} | {1,8} | {2,8}", "Name", "Result", $"AVG. time (ms) of {runs} runs");
 WriteLine("-------------------------------------------------------------------------");

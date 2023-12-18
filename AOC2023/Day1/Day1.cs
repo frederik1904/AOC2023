@@ -68,9 +68,26 @@ public class Day1 : ISolutionRunner
                 {
                     if (!substr.StartsWith(words[j]))
                         continue;
-                    lowest ??= _translation[words[j]];
+                    lowest = _translation[words[j]];
+                }
+
+                if (lowest != null)
+                    break;
+            }
+            
+            for (var i = line.Length - 1; i >= 0; i--)
+            {
+                var substr = line.Substring(i);
+
+                for (var j = 0; j < words.Count; j++)
+                {
+                    if (!substr.StartsWith(words[j]))
+                        continue;
                     highest = _translation[words[j]];
                 }
+
+                if (highest != null)
+                    break;
             }
             
             result += int.Parse(lowest.ToString() + highest.ToString());;

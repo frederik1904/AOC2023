@@ -7,7 +7,7 @@ public class FileLoaderService<TOutputType, TFileTransformer> where TFileTransfo
 
     public FileLoaderService(string filename)
     {
-        _path = $"C:\\work\\Automitation\\AOC2023\\AOC2023\\Files\\{filename}";
+        _path = $"/Users/frederik/RiderProjects/AOC2023/AOC2023/Files/{filename}";
         _fileTransformer = new TFileTransformer();
     }
 
